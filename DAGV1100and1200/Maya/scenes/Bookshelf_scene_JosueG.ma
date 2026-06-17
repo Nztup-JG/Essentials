@@ -1,32 +1,37 @@
 //Maya ASCII 2026 scene
 //Name: Bookshelf_scene_JosueG.ma
-//Last modified: Tue, Jun 09, 2026 11:05:51 PM
+//Last modified: Wed, Jun 17, 2026 03:37:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cup__No_Handle_" -rfn "Cup__No_Handle_RN" -op "v=0;" -typ "mayaAscii"
 		 "D:/Essentials/DAGV1100and1200/Maya/scenes/Cup (No Handle).ma";
 file -rdi 1 -ns "Flower" -rfn "FlowerRN" -op "v=0;" -typ "mayaAscii" "D:/Essentials/Essentials/DAGV1100and1200/Maya/scenes/Flower.ma";
+file -rdi 1 -ns "Unit5_LabScene" -rfn "Unit5_LabSceneRN" -op "v=0;" -typ "mayaAscii"
+		 "D:/Essentials/Essentials/DAGV1100and1200/Maya/scenes/Unit5_LabScene.ma";
 file -r -ns "Cup__No_Handle_" -dr 1 -rfn "Cup__No_Handle_RN" -op "v=0;" -typ "mayaAscii"
 		 "D:/Essentials/DAGV1100and1200/Maya/scenes/Cup (No Handle).ma";
 file -r -ns "Flower" -dr 1 -rfn "FlowerRN" -op "v=0;" -typ "mayaAscii" "D:/Essentials/Essentials/DAGV1100and1200/Maya/scenes/Flower.ma";
+file -r -ns "Unit5_LabScene" -dr 1 -rfn "Unit5_LabSceneRN" -op "v=0;" -typ "mayaAscii"
+		 "D:/Essentials/Essentials/DAGV1100and1200/Maya/scenes/Unit5_LabScene.ma";
 requires maya "2026";
 requires "mtoa" "5.5.5.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202605050732-e827b950f8";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "11339FD8-42B4-C576-E13C-B19765FCA768";
+fileInfo "UUID" "631BC0A0-4374-A3F2-2779-8F9A6FCEE56A";
 createNode transform -s -n "persp";
 	rename -uid "3DD49C12-4FB7-1B1D-6DAC-C3814A6E1F4A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 16.605794371174483 8.8887836605984347 10.641314462399382 ;
-	setAttr ".r" -type "double3" -24.938352640571615 -10002.999999998816 7.0694371516183896e-15 ;
+	setAttr ".t" -type "double3" 19.749256923810595 21.185250704064085 46.861746212870784 ;
+	setAttr ".r" -type "double3" -19.538352639905753 -10057.000000001513 -1.7276142920370825e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DD323E4F-4722-16D7-F2BE-2383A2C6714D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 10.343370105019716;
+	setAttr ".coi" 65.762957741326517;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -139,6 +144,7 @@ createNode mesh -n "FloorMeshShape" -p "FloorMesh";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Table";
 	rename -uid "CD3890F9-4028-1A95-B8AB-1098E7171A0E";
+	setAttr ".t" -type "double3" 0 0.033069931602923958 0 ;
 	setAttr ".rp" -type "double3" 11.075414657592773 -0.045597076416015625 11.300603406142679 ;
 	setAttr ".sp" -type "double3" 11.075414657592773 -0.045597076416015625 11.300603406142679 ;
 createNode mesh -n "Table" -p "|Table";
@@ -391,8 +397,9 @@ createNode mesh -n "Table" -p "|Table";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "wall1";
 	rename -uid "8DF62527-4839-C45A-6EA9-5DBE8E39F0BB";
-	setAttr ".rp" -type "double3" 0 0 -12 ;
-	setAttr ".sp" -type "double3" 0 0 -12 ;
+	setAttr ".t" -type "double3" 0 0.50055645564623363 0 ;
+	setAttr ".rp" -type "double3" 12 -0.5 -12 ;
+	setAttr ".sp" -type "double3" 12 -0.5 -12 ;
 createNode mesh -n "wallShape1" -p "wall1";
 	rename -uid "996ED4A6-4DDE-E6DC-2AC9-918F15E7B6E4";
 	setAttr -k off ".v";
@@ -470,8 +477,9 @@ createNode mesh -n "wallShape1" -p "wall1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Bookshelf2";
 	rename -uid "9AB97C1A-4F52-673C-D1E1-7FAEF129D274";
-	setAttr ".rp" -type "double3" -1.78743577003479 0.49646136164665222 -8.5797061920166016 ;
-	setAttr ".sp" -type "double3" -1.78743577003479 0.49646136164665222 -8.5797061920166016 ;
+	setAttr ".t" -type "double3" 0 -0.27854503118210738 0 ;
+	setAttr ".rp" -type "double3" 9.3454780578613281 0.27860015630722046 -11.022525787353516 ;
+	setAttr ".sp" -type "double3" 9.3454780578613281 0.27860015630722046 -11.022525787353516 ;
 createNode mesh -n "Bookshelf1" -p "Bookshelf2";
 	rename -uid "1077FAD4-4783-473A-7472-D99F98429FEE";
 	setAttr -k off ".v";
@@ -1018,6 +1026,7 @@ createNode camera -n "bottomShape" -p "bottom";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "wall2";
 	rename -uid "6E51406F-49B3-9D27-9F07-3CB55B37F556";
+	setAttr ".t" -type "double3" 0 0.50000005960464478 0 ;
 	setAttr ".rp" -type "double3" -12 0 -5.3290705182007514e-15 ;
 	setAttr ".sp" -type "double3" -12 0 -5.3290705182007514e-15 ;
 createNode mesh -n "Wall2" -p "wall2";
@@ -3157,6 +3166,7 @@ createNode mesh -n "Books2Shape" -p "Books2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube4";
 	rename -uid "5924B738-49CF-7068-D5EF-44B4CF2C5721";
+	setAttr ".t" -type "double3" 0 0.045135021209716797 0 ;
 	setAttr ".rp" -type "double3" 2.5275840759277344 -0.090732097625732422 10.592421531677246 ;
 	setAttr ".sp" -type "double3" 2.5275840759277344 -0.090732097625732422 10.592421531677246 ;
 createNode mesh -n "ChairMesh_1" -p "pCube4";
@@ -3653,6 +3663,7 @@ createNode mesh -n "ChairMesh_1" -p "pCube4";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube5";
 	rename -uid "2AAAC6BF-4AAB-889E-96D5-9F99550F1D7C";
+	setAttr ".t" -type "double3" 0 0.045135021209716797 0 ;
 	setAttr ".rp" -type "double3" 10.185935020446777 -0.090732097625732422 1.9132242202758789 ;
 	setAttr ".sp" -type "double3" 10.185935020446777 -0.090732097625732422 1.9132242202758789 ;
 createNode mesh -n "ChairMesh_2" -p "pCube5";
@@ -5145,15 +5156,15 @@ createNode mesh -n "Cup1" -p "pCylinder1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D4520BB7-4790-5AFB-4F93-059F3200974A";
+	rename -uid "0CA22B73-4921-52B2-A65E-9C890CABA848";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9277F6DC-4A4F-C837-C07B-649EA43E8AC0";
+	rename -uid "7A1BA27F-489D-ACCD-1693-6D82D99B8A05";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "99B5B104-4445-834F-50F3-A5942C044F70";
+	rename -uid "CCFD7544-427C-448D-E98E-FA9F5E3880EF";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "244B9958-4B75-97A1-4C0C-208F78332582";
+	rename -uid "BCB06DAB-43C6-BD46-C26F-B0A9371F51F5";
 	setAttr ".cdl" 2;
 	setAttr -s 7 ".dli[1:6]"  1 2 0 0 3 4;
 	setAttr -s 4 ".dli";
@@ -5161,7 +5172,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "9D440B55-48CE-B6A2-3C7B-12BB8A2B6399";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "4B979A2B-446B-3150-888C-039173E53D02";
+	rename -uid "66182730-4A23-CAA0-8CF5-DAB6DF67D0E5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "405D02E9-41B4-5B09-447C-5098FC41FEAC";
 	setAttr ".g" yes;
@@ -5288,6 +5299,114 @@ createNode transformGeometry -n "transformGeometry2";
 	rename -uid "8F39BF25-426B-B1AA-5FAD-C3B0FD4C7805";
 	setAttr ".txf" -type "matrix" 0.52340489104499321 0 0 0 0 0.52340489104499321 0 0
 		 0 0 0.52340489104499321 0 9.48518821576309 3.2371254682262656 11.122590942415762 1;
+createNode reference -n "Unit5_LabSceneRN";
+	rename -uid "C4FE86FE-479F-9585-5D37-6C8D2C0D4E18";
+	setAttr -s 10 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Unit5_LabSceneRN"
+		"Unit5_LabSceneRN" 0
+		"Unit5_LabSceneRN" 22
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "translate" " -type \"double3\" -4.04542509921843951 4.76094554215457411 -4.06801007932440228"
+		
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "translateX" " -av"
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "translateY" " -av"
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "translateZ" " -av"
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "scale" " -type \"double3\" 1.7472537407152553 1.7472537407152553 1.7472537407152553"
+		
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "scaleX" " -av"
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "scaleY" " -av"
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "scaleZ" " -av"
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "rotatePivot" " -type \"double3\" 3.7530617950762295 -4.80882644653320312 3.68444397433639548"
+		
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "rotatePivotTranslate" " -type \"double3\" -11.24849846347222737 0 -11.11126282199264459"
+		
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "scalePivot" " -type \"double3\" 0.80846782554854713 -4.9779166122476681e-08 0.77577508793137051"
+		
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "scalePivotTranslate" " -type \"double3\" 2.94459396952768193 -4.80882639675403745 2.90866888640502452"
+		
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateY" 
+		"Unit5_LabSceneRN.placeHolderList[1]" ""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateX" 
+		"Unit5_LabSceneRN.placeHolderList[2]" ""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateZ" 
+		"Unit5_LabSceneRN.placeHolderList[3]" ""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.scaleX" "Unit5_LabSceneRN.placeHolderList[4]" 
+		""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.scaleY" "Unit5_LabSceneRN.placeHolderList[5]" 
+		""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.scaleZ" "Unit5_LabSceneRN.placeHolderList[6]" 
+		""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.visibility" 
+		"Unit5_LabSceneRN.placeHolderList[7]" ""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateX" 
+		"Unit5_LabSceneRN.placeHolderList[8]" ""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateY" 
+		"Unit5_LabSceneRN.placeHolderList[9]" ""
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateZ" 
+		"Unit5_LabSceneRN.placeHolderList[10]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode animCurveTU -n "Corner_Plant_Stand_scaleX";
+	rename -uid "B357931F-4F8A-D589-24D1-A7B8DD1E292B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 2.0988704446634108;
+createNode animCurveTU -n "Corner_Plant_Stand_scaleY";
+	rename -uid "10FF5255-4F1A-C4A3-2776-908A1CD3399B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 2.0988704446634108;
+createNode animCurveTU -n "Corner_Plant_Stand_scaleZ";
+	rename -uid "ED9D9598-4A6E-ECCA-1B3E-1B865A6BD973";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 2.0988704446634108;
+createNode animCurveTU -n "Corner_Plant_Stand_visibility";
+	rename -uid "06D61F91-4CAD-C611-C7AF-9BB39845CB19";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "Corner_Plant_Stand_translateX";
+	rename -uid "AD1A3180-4B11-539B-E227-3C9B9EC96BD0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "Corner_Plant_Stand_translateY";
+	rename -uid "17A345EF-401B-D95C-6751-9E958C6EE148";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "Corner_Plant_Stand_translateZ";
+	rename -uid "CB54A824-44F4-E8B6-557C-5E8552E9F776";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "Corner_Plant_Stand_rotateX";
+	rename -uid "1CFFA4EF-4A83-09D9-F838-CC8EC4915989";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "Corner_Plant_Stand_rotateY";
+	rename -uid "2CB5B5E3-437B-1D13-B671-CEB1BA7F8E65";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 179.99999999999991;
+createNode animCurveTA -n "Corner_Plant_Stand_rotateZ";
+	rename -uid "D0ED20A5-4C42-AE1E-9B5D-6F823504A9EB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -5305,7 +5424,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 4 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -5313,9 +5432,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 35 ".dsm";
+	setAttr -s 37 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 30 ".gn";
+	setAttr -s 31 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -5336,12 +5455,20 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "transformGeometry1.og" "Cup__No_Handle_RN.phl[1]";
 connectAttr "Cup__No_Handle_RN.phl[2]" "transformGeometry1.ig";
 connectAttr "transformGeometry2.og" "FlowerRN.phl[1]";
 connectAttr "FlowerRN.phl[2]" "transformGeometry2.ig";
+connectAttr "Corner_Plant_Stand_rotateY.o" "Unit5_LabSceneRN.phl[1]";
+connectAttr "Corner_Plant_Stand_rotateX.o" "Unit5_LabSceneRN.phl[2]";
+connectAttr "Corner_Plant_Stand_rotateZ.o" "Unit5_LabSceneRN.phl[3]";
+connectAttr "Corner_Plant_Stand_scaleX.o" "Unit5_LabSceneRN.phl[4]";
+connectAttr "Corner_Plant_Stand_scaleY.o" "Unit5_LabSceneRN.phl[5]";
+connectAttr "Corner_Plant_Stand_scaleZ.o" "Unit5_LabSceneRN.phl[6]";
+connectAttr "Corner_Plant_Stand_visibility.o" "Unit5_LabSceneRN.phl[7]";
+connectAttr "Corner_Plant_Stand_translateX.o" "Unit5_LabSceneRN.phl[8]";
+connectAttr "Corner_Plant_Stand_translateY.o" "Unit5_LabSceneRN.phl[9]";
+connectAttr "Corner_Plant_Stand_translateZ.o" "Unit5_LabSceneRN.phl[10]";
 connectAttr "Floor.di" "FloorMesh.do";
 connectAttr "walls.di" "wall1.do";
 connectAttr "Bookshelf.di" "Bookshelf2.do";
