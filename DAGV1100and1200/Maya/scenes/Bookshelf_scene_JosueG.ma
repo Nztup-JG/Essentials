@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Bookshelf_scene_JosueG.ma
-//Last modified: Wed, Jun 17, 2026 03:37:33 PM
+//Last modified: Mon, Jul 20, 2026 06:35:41 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cup__No_Handle_" -rfn "Cup__No_Handle_RN" -op "v=0;" -typ "mayaAscii"
 		 "D:/Essentials/DAGV1100and1200/Maya/scenes/Cup (No Handle).ma";
@@ -21,21 +21,21 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202605050732-e827b950f8";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "631BC0A0-4374-A3F2-2779-8F9A6FCEE56A";
+fileInfo "UUID" "F4A5B96C-4894-A3A2-6489-0EB38F349946";
 createNode transform -s -n "persp";
 	rename -uid "3DD49C12-4FB7-1B1D-6DAC-C3814A6E1F4A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 19.749256923810595 21.185250704064085 46.861746212870784 ;
-	setAttr ".r" -type "double3" -19.538352639905753 -10057.000000001513 -1.7276142920370825e-15 ;
+	setAttr ".t" -type "double3" 17.398907321416115 24.403651119060719 20.886624685234374 ;
+	setAttr ".r" -type "double3" -31.538352639836798 -10033.000000000467 2.3317905640889448e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DD323E4F-4722-16D7-F2BE-2383A2C6714D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 65.762957741326517;
+	setAttr ".coi" 42.021284105696637;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 8.5167875289916992 5.8194894790649414 8.7387351989746094 ;
+	setAttr ".tp" -type "double3" 0.14691370145373917 7.4012067773775794 -9.5367431640625e-07 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "7D64CD22-49B8-12D9-7078-ECBDFBDAE4F7";
@@ -5156,15 +5156,15 @@ createNode mesh -n "Cup1" -p "pCylinder1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0CA22B73-4921-52B2-A65E-9C890CABA848";
+	rename -uid "5175344D-45C1-3655-159E-04B283EF2D68";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "7A1BA27F-489D-ACCD-1693-6D82D99B8A05";
+	rename -uid "6889DBA9-4745-79BE-DEFA-9798110894E0";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "CCFD7544-427C-448D-E98E-FA9F5E3880EF";
+	rename -uid "EC7EE7D4-4D76-572A-7007-13A5324AC240";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BCB06DAB-43C6-BD46-C26F-B0A9371F51F5";
+	rename -uid "B3313BD1-4FFE-4349-5BE1-7DB84ADAEF24";
 	setAttr ".cdl" 2;
 	setAttr -s 7 ".dli[1:6]"  1 2 0 0 3 4;
 	setAttr -s 4 ".dli";
@@ -5172,7 +5172,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "9D440B55-48CE-B6A2-3C7B-12BB8A2B6399";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "66182730-4A23-CAA0-8CF5-DAB6DF67D0E5";
+	rename -uid "41750C5F-4CE5-7852-AB78-628898BD9490";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "405D02E9-41B4-5B09-447C-5098FC41FEAC";
 	setAttr ".g" yes;
@@ -5270,11 +5270,15 @@ createNode groupId -n "groupId121";
 createNode reference -n "FlowerRN";
 	rename -uid "45274CD2-4A8F-8B8A-2866-A3B90AE1668B";
 	setAttr -s 2 ".phl";
-	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"FlowerRN"
-		"FlowerRN" 0
+		"FlowerRN" 2
+		3 "Flower:groupParts2.outputGeometry" "|Flower:pCylinder4|Flower:pCylinder4Shape.inMesh" 
+		""
+		5 3 "FlowerRN" "Flower:groupParts2.outputGeometry" "FlowerRN.placeHolderList[2]" 
+		"Flower:pCylinder4Shape.i"
 		"FlowerRN" 8
 		2 "|Flower:pCylinder4" "translate" " -type \"double3\" 0 0 0"
 		2 "|Flower:pCylinder4" "scale" " -type \"double3\" 1 1 1"
@@ -5284,12 +5288,10 @@ createNode reference -n "FlowerRN";
 		
 		2 "|Flower:pCylinder4|Flower:pCylinder4Shape" "uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		
-		3 "Flower:groupParts2.outputGeometry" "|Flower:pCylinder4|Flower:pCylinder4Shape.inMesh" 
-		""
-		5 4 "FlowerRN" "|Flower:pCylinder4|Flower:pCylinder4Shape.inMesh" "FlowerRN.placeHolderList[1]" 
-		""
-		5 3 "FlowerRN" "Flower:groupParts2.outputGeometry" "FlowerRN.placeHolderList[2]" 
-		"Flower:pCylinder4Shape.i";
+		2 "|Flower:pPlane4" "visibility" " 0"
+		2 "|Flower:group|Flower:pasted__pPlane4" "visibility" " 0"
+		5 4 "FlowerRN" "|Flower:pCylinder4|Flower:pCylinder4Shape.inMesh" "FlowerRN.placeHolderList[3]" 
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode transformGeometry -n "transformGeometry1";
@@ -5316,12 +5318,12 @@ createNode reference -n "Unit5_LabSceneRN";
 		"Unit5_LabSceneRN"
 		"Unit5_LabSceneRN" 0
 		"Unit5_LabSceneRN" 22
-		2 "|Unit5_LabScene:Corner_Plant_Stand" "translate" " -type \"double3\" -4.04542509921843951 4.76094554215457411 -4.06801007932440228"
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "translate" " -type \"double3\" -3.91306682321797972 4.8088265061378479 -3.99907431590240847"
 		
 		2 "|Unit5_LabScene:Corner_Plant_Stand" "translateX" " -av"
 		2 "|Unit5_LabScene:Corner_Plant_Stand" "translateY" " -av"
 		2 "|Unit5_LabScene:Corner_Plant_Stand" "translateZ" " -av"
-		2 "|Unit5_LabScene:Corner_Plant_Stand" "scale" " -type \"double3\" 1.7472537407152553 1.7472537407152553 1.7472537407152553"
+		2 "|Unit5_LabScene:Corner_Plant_Stand" "scale" " -type \"double3\" 1.66546102197180446 1.66546102197180446 1.66546102197180446"
 		
 		2 "|Unit5_LabScene:Corner_Plant_Stand" "scaleX" " -av"
 		2 "|Unit5_LabScene:Corner_Plant_Stand" "scaleY" " -av"
@@ -5334,11 +5336,11 @@ createNode reference -n "Unit5_LabSceneRN";
 		
 		2 "|Unit5_LabScene:Corner_Plant_Stand" "scalePivotTranslate" " -type \"double3\" 2.94459396952768193 -4.80882639675403745 2.90866888640502452"
 		
-		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateY" 
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateX" 
 		"Unit5_LabSceneRN.placeHolderList[1]" ""
-		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateX" 
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateY" 
 		"Unit5_LabSceneRN.placeHolderList[2]" ""
-		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateZ" 
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateZ" 
 		"Unit5_LabSceneRN.placeHolderList[3]" ""
 		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.scaleX" "Unit5_LabSceneRN.placeHolderList[4]" 
 		""
@@ -5346,13 +5348,13 @@ createNode reference -n "Unit5_LabSceneRN";
 		""
 		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.scaleZ" "Unit5_LabSceneRN.placeHolderList[6]" 
 		""
-		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.visibility" 
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateY" 
 		"Unit5_LabSceneRN.placeHolderList[7]" ""
-		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateX" 
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateX" 
 		"Unit5_LabSceneRN.placeHolderList[8]" ""
-		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateY" 
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.rotateZ" 
 		"Unit5_LabSceneRN.placeHolderList[9]" ""
-		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.translateZ" 
+		5 4 "Unit5_LabSceneRN" "|Unit5_LabScene:Corner_Plant_Stand.visibility" 
 		"Unit5_LabSceneRN.placeHolderList[10]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -5432,9 +5434,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 37 ".dsm";
+	setAttr -s 33 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 31 ".gn";
+	setAttr -s 25 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -5457,18 +5459,17 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 connectAttr "transformGeometry1.og" "Cup__No_Handle_RN.phl[1]";
 connectAttr "Cup__No_Handle_RN.phl[2]" "transformGeometry1.ig";
-connectAttr "transformGeometry2.og" "FlowerRN.phl[1]";
-connectAttr "FlowerRN.phl[2]" "transformGeometry2.ig";
-connectAttr "Corner_Plant_Stand_rotateY.o" "Unit5_LabSceneRN.phl[1]";
-connectAttr "Corner_Plant_Stand_rotateX.o" "Unit5_LabSceneRN.phl[2]";
-connectAttr "Corner_Plant_Stand_rotateZ.o" "Unit5_LabSceneRN.phl[3]";
+connectAttr "transformGeometry2.og" "FlowerRN.phl[3]";
+connectAttr "Corner_Plant_Stand_translateX.o" "Unit5_LabSceneRN.phl[1]";
+connectAttr "Corner_Plant_Stand_translateY.o" "Unit5_LabSceneRN.phl[2]";
+connectAttr "Corner_Plant_Stand_translateZ.o" "Unit5_LabSceneRN.phl[3]";
 connectAttr "Corner_Plant_Stand_scaleX.o" "Unit5_LabSceneRN.phl[4]";
 connectAttr "Corner_Plant_Stand_scaleY.o" "Unit5_LabSceneRN.phl[5]";
 connectAttr "Corner_Plant_Stand_scaleZ.o" "Unit5_LabSceneRN.phl[6]";
-connectAttr "Corner_Plant_Stand_visibility.o" "Unit5_LabSceneRN.phl[7]";
-connectAttr "Corner_Plant_Stand_translateX.o" "Unit5_LabSceneRN.phl[8]";
-connectAttr "Corner_Plant_Stand_translateY.o" "Unit5_LabSceneRN.phl[9]";
-connectAttr "Corner_Plant_Stand_translateZ.o" "Unit5_LabSceneRN.phl[10]";
+connectAttr "Corner_Plant_Stand_rotateY.o" "Unit5_LabSceneRN.phl[7]";
+connectAttr "Corner_Plant_Stand_rotateX.o" "Unit5_LabSceneRN.phl[8]";
+connectAttr "Corner_Plant_Stand_rotateZ.o" "Unit5_LabSceneRN.phl[9]";
+connectAttr "Corner_Plant_Stand_visibility.o" "Unit5_LabSceneRN.phl[10]";
 connectAttr "Floor.di" "FloorMesh.do";
 connectAttr "walls.di" "wall1.do";
 connectAttr "Bookshelf.di" "Bookshelf2.do";
@@ -5500,6 +5501,7 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "layerManager.dli[1]" "Floor.id";
 connectAttr "layerManager.dli[2]" "walls.id";
 connectAttr "layerManager.dli[6]" "Bookshelf.id";
+connectAttr "FlowerRN.phl[2]" "transformGeometry2.ig";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "FloorMeshShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|Table|Table.iog" ":initialShadingGroup.dsm" -na;
