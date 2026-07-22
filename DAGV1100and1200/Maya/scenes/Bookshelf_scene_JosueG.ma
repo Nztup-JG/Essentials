@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Bookshelf_scene_JosueG.ma
-//Last modified: Tue, Jul 21, 2026 06:03:27 PM
+//Last modified: Tue, Jul 21, 2026 06:09:12 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cup__No_Handle_" -rfn "Cup__No_Handle_RN" -op "v=0;" -typ "mayaAscii"
 		 "D:/Essentials/DAGV1100and1200/Maya/scenes/Cup (No Handle).ma";
@@ -19,17 +19,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202605050732-e827b950f8";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "A69DB7F0-427A-6EA3-E36B-55B2247A6ED3";
+fileInfo "UUID" "E8C356D1-4D87-81D1-433C-EF879986EAD9";
 createNode transform -s -n "persp";
 	rename -uid "3DD49C12-4FB7-1B1D-6DAC-C3814A6E1F4A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 14.494956528850437 43.548188068605526 91.274834034992551 ;
-	setAttr ".r" -type "double3" -23.738352640279764 -10437.799999999979 -2.9839694487839959e-16 ;
+	setAttr ".t" -type "double3" 25.058616881140789 29.491717913051406 19.582315487784609 ;
+	setAttr ".r" -type "double3" -25.53835264027018 -10395.400000000014 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DD323E4F-4722-16D7-F2BE-2383A2C6714D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 96.744779284790283;
+	setAttr ".coi" 44.102934189179201;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -27532,15 +27532,15 @@ createNode mesh -n "pPlaneShape3" -p "pPlane3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "5A9E50E2-467A-9B2F-CD35-D9807B3F3EEA";
+	rename -uid "EF0B0AF3-4142-4254-DB4C-148D52C38623";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "10BD89F0-47F9-213E-BD95-40816AC79A2A";
+	rename -uid "9730E7B5-477D-0149-1CEE-E38DB5B78ED6";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DD9C8E7B-4D22-F7D8-11FA-00AD39A694D2";
+	rename -uid "AA1893DA-4BD0-1F4C-98A4-588B222C2EF0";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "FCE579EC-4687-9537-2C1E-2C8CFBF0573B";
+	rename -uid "27759AC1-4A67-A116-9594-09A6065C0043";
 	setAttr ".cdl" 2;
 	setAttr -s 7 ".dli[1:6]"  1 2 0 0 3 4;
 	setAttr -s 4 ".dli";
@@ -27548,7 +27548,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "9D440B55-48CE-B6A2-3C7B-12BB8A2B6399";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A28DC8BB-4DBB-F856-DBFD-F48A951F373C";
+	rename -uid "66BB53EB-4DC2-6F48-BD1A-AD80E0D40060";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "405D02E9-41B4-5B09-447C-5098FC41FEAC";
 	setAttr ".g" yes;
@@ -27717,8 +27717,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "transformGeometry1.og" "Cup__No_Handle_RN.phl[1]";
 connectAttr "Cup__No_Handle_RN.phl[2]" "transformGeometry1.ig";
 connectAttr "Floor.di" "FloorMesh.do";
